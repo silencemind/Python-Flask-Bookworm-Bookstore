@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- General CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='css/index.css') }} />
+	<link rel="stylesheet" href={{ url_for('static', filename='css/checkout.css') }} />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto+Condensed:700&display=swap" rel="stylesheet">
+
+	<title> Home - Bookworm Bookstore </title>
+
+</head>
+
+<body>
+	<!-- Navigation/Search Bar -->
+	<nav>
+		<div class="title">
+			<h4> Bookworm Bookstore </h4>
+		</div>
+		<div class="search-bar">
+			<input id="searchBar" type="text" placeholder="Search..." autocomplete="on">
+			<input id="searchBtn" type="submit" value="Search">
+		</div>
+		<ul class="navLinks">
+			<li> <a href="/"> Product </a> </li>
+			<li> <a href="/cart"> Cart </a> </li>
+			<li> <a href="#"> Login </a> </li>
+		</ul>
+	</nav>
+
+	<div id="page-container">
+		<div id="content-wrap">
+
+			<!-- all other page content -->
+			<div id="content">
+
+				<div style="text-align: center;">
+
+					<p>Your order has been successfully placed</p>
+					<center>
+						<table class="table" style="width: 50%;">
+							<thead>
+							  <tr>
+								<th scope="col">ID</th>
+								<th scope="col">Contact Number</th>
+								<th scope="col">Email</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								  <td>{{id}}</td>
+						
+								  <td>{{bookname}}</td>
+								<td>{{email}}</td>
+							  </tr>
+							
+							</tbody>
+						  </table>
+				</center>
+					<div id="cartItems">
+						<h2>The items you have ordered</h2>
+						<div id="tableItems">
+							
+							<hr id="seperator">
+							<div id="total">
+							
+								<span id="subtotal">Your total order size is</span> : ${{totalPrice}}
+								<span if="deliverydate"></span>
+							</div>
+							<div><a href="/">Return to Home Page</a></div>
+						</div>
+					</div>
+
+
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<!-- Links -->
+			<ul id="links">
+				<ul>
+					<li class="list-title"> Connect with Us </li>
+					<div class="listcontent">
+						<a href="https://instagram.com" target="_blank"> <img class="icons"
+								src={{url_for('static', filename="images/insta.png")}} alt="Instagram"> </a>
+						<a href="https://facebooks.com" target="_blank"> <img class="icons"
+								src={{url_for('static', filename="images/fb.png")}} alt="Facebook"> </a>
+						<a href="https://twitter.com" target="_blank"> <img class="icons"
+								src={{url_for('static', filename="images/twitter.png")}} alt="Twitter"> </a>
+					</div>
+				</ul>
+				<ul>
+					<li class="list-title"> Discover </li>
+					<div class="listcontent">
+						<a href="#"> Home </a>
+						<a href="#"> Books </a>
+						<a href="#"> Return to Top </a>
+					</div>
+				</ul>
+				<ul>
+					<li class="list-title"> Help </li>
+					<div class="listcontent">
+						<a href="#"> Contact Us </a>
+						<a href="#"> Report a Problem </a>
+					</div>
+				</ul>
+			</ul>
+		</footer>
+	</div>
+
+
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="covers">
+	
+	<table>
+		{% for i in range(0,(data|length) // 5 + 2)%}
+		
+		<tr id="productName">
+			{% for row in data[i*5:i*5+5] %}
+			<td>
+				{{row[0]}}
+			</td>
+			{% endfor %}
+		</tr>
+		<tr id="productImage">
+			{% for row in data[i*5:i*5+5] %}
+			<td style="padding:0 40px 0 40px;">
+				<a href="/productDescription?productId={{row[0]}}">
+					<img height="200px" width="200px" src={{ url_for('static', filename='uploads/' + row[3]) }} id="itemImage" />
+				</a>
+			</td>
+			{% endfor %}
+		</tr>
+		<tr id="productPrice">
+			{% for row in data[i*5:i*5+5] %}
+			<td>
+				$ {{row[1]}}
+			</td>
+			{% endfor %}
+		</tr>
+		<tr id="productPrice">
+			{% for row in data[i*5:i*5+5] %}
+			<td>
+				<a href="/removeItem?productId={{row[0]}}">Remove Product</a>
+			</td>
+			{% endfor %}
+		</tr>
+		<tr id="productPrice">
+			{% for row in data[i*5:i*5+5] %}
+			<td>
+				<a href="/updateItem?productId={{row[0]}}">Update Product</a>
+			</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+	
+  
+</div>
+{% endblock %}

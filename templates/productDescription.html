@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div style="text-align: center;">
+	<div id="productName">
+		<h1>{{data[0]}}</h1>
+	</div>
+	<div>
+		<img height="500px" width="500px" src={{url_for('static', filename='uploads/'+data[3]) }} id="productImage" />
+	</div>
+
+	<div>
+		<h2>Details</h2>
+		<table style="black;margin-left:auto;margin-right:auto;">
+			<tr>
+				<td>Name : </td>
+				<td>{{data[0]}}</td>
+			</tr>
+			<tr>
+				<td>Price : </td>
+				<td>${{data[1]}}</td>
+			</tr>
+			<tr>
+				<td>Stock : </td>
+				<td>{{data[4]}}</td>
+			</tr>
+		</table >
+		<h2>Description</h2>
+		<p>{{data[2]}}</p>
+	</div>
+	<div id="addToCart">
+		<a href="/addToCart?productId={{request.args.get('productId')}}">Add to Cart</a>
+	</div>
+</div>
+{% endblock %}

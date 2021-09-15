@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div style="text-align: center;">
+<h2>Update items</h2>
+<form action="/updateItem" method="POST" enctype="multipart/form-data">
+	Name: <input type="text" name="name" value={{data[0]}} readonly><br>
+	Price: <input type="text" name="price" value={{data[1]}}><br>
+	Description: <textarea name="description" rows=3 cols="40">{{data[2]}}</textarea><br>
+	Image: <input type="file" name="image" value={{data[3]}}><br>
+	Stock: <input type="text" name="stock" value={{data[4]}}><br>
+	Category: <select name="category" value={{data[6]}}>
+		{% for row in categories %}
+		<option value="{{row}}">{{row}}</option>
+		{% endfor %}
+	</select><br>
+	<input type="submit">
+</form>
+</div>
+{% endblock %}
