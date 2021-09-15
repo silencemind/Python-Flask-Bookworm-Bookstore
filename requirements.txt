@@ -49,7 +49,7 @@ EditorConfig==0.12.3
 feedparser==6.0.2
 filelock==3.0.12
 Flask==1.0.3
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 fuzzywuzzy==0.18.0
 graphviz==0.14
 gunicorn==20.0.4
