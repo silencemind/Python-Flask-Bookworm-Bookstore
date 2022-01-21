@@ -57,7 +57,7 @@ html5lib==1.1
 idna==2.10
 Interlace==1.9.3
 intervaltree==3.1.0
-ipython==7.27.0
+ipython==7.31.1
 isort==5.6.4
 itsdangerous==1.1.0
 jedi==0.18.0
