@@ -81,7 +81,7 @@ netaddr==0.7.20
 numpy==1.18.1
 packaging==20.7
 pandas==0.25.3
-paramiko==2.7.2
+paramiko==2.10.1
 parse==1.14.0
 parso==0.8.2
 pbr==5.4.4
