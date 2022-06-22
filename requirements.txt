@@ -78,7 +78,7 @@ mysql==0.0.2
 mysql-connector-python==8.0.20
 mysqlclient==1.4.6
 netaddr==0.7.20
-numpy==1.18.1
+numpy==1.22.0
 packaging==20.7
 pandas==0.25.3
 paramiko==2.10.1
